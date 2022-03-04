@@ -35,7 +35,8 @@ app.use(express.static("public"));
 // middlewares
 app.use(morgan("common"));
 app.use(helmet());
-app.use(cors({ origin: process.env.CORS_ORIGIN }));
+// app.use(cors({ origin: process.env.CORS_ORIGIN }));
+app.use(cors());
 app.use(express.json());
 
 app.use(bodyParser.json());
