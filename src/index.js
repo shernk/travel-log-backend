@@ -6,14 +6,14 @@ const helmet = require("helmet");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
 const middlewares = require("./middlewares");
 const routes = require("../api/routes");
 
 const app = express();
 dotenv.config();
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.DATABASE_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
